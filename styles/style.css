@@ -1,0 +1,228 @@
+html {
+    --main-background-color: #ffffff;
+    --second-background-color: #F6F6F6;
+    --main-font-color: #3C3C3C;
+    --card-title-font-color: #282528;
+    --card-font-color: #646464;
+    --after-color: #DDDBDB;
+    --accent-color: #18B5DC;
+    --hover-card-color: #5DCBE6;
+    --main-font-family: 'Lato', sans-serif;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    transition: .2s all;
+}
+body {
+    font-style: normal;
+    font-family: var(--main-font-family);
+    color: var(--main-font-color);
+    background-color: var(--main-background-color);
+}
+.container {
+    max-width: 1230px;
+    width: 100%;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-right: 15px;
+}
+.container__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container__flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+button {
+    cursor: pointer;
+}
+/*header*/
+.header {
+    padding: 10px 0;
+}
+.nav__link {
+    text-decoration: none;
+    color: #3C3C3C;
+}
+.nav__list {
+    display: flex;
+    gap: 30px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+a:hover {
+    color: #18B5DC;
+}
+.button {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3C3C3C;
+    padding: 10px 20px;
+    border: 1px solid var(--main-font-color);
+}
+.button:hover {
+    color: #ffffff;
+    background: #18B5DC;
+    border: 1px soli #18B5DC;;
+}
+/*section*/
+.about-us {
+    padding: 150px 0;
+    background-color: var(--second-background-color);
+}
+.title {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 41px;
+    text-align: center;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+
+    position: relative;
+}
+.title::after {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 4px;
+
+    background-color: var(--after-color);
+    left: 48%;
+    bottom: -20px;
+}
+.about-us__text {
+    padding: 60px 270px;
+    text-align: center;
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+}
+.about-us__item-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: var(--card-title-font-color);
+    margin-top: 20px;
+}
+.about-us__item-text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--card-font-color);
+}
+.about-us__list {
+    display: flex;
+    gap: 30px;
+
+}
+.about-us__item {
+    position: relative;
+}
+.about-us__box {
+    position: relative;
+    width: 100%;
+    height: 270px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.about-us__item-img {
+    display: block;
+    height: inherit;
+    object-fit: contain;
+    margin: 0 auto;
+}
+.list-over {
+    background: var(--accent-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+.list-over__item-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--hover-card-color);
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+}
+.about-us__box:hover .list-over {
+    opacity: 1;
+}
+.list-over__item-link svg {
+    width: 20px;
+    height: 20px;
+    background-color: #5DCBE6;;
+    fill:#FFFFFF;
+}
+.list-over__item-link:hover,
+.list-over__item-link:hover svg {
+    background-color:#FFFFFF;
+    fill:#18B5DC;
+}
+/*footer*/
+.footer {
+    padding: 40px 0;
+}
+.logo--footer {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.footer .nav__list {
+    margin: 28px 0;
+    justify-content: center;
+}
+.icon-list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.icon-list__item-link {
+    display: block;
+
+    background: var(--main-background-color);
+
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--accent-color);
+    fill: var(--accent-color);
+    position: relative;
+}
+.icon-list__item-link svg {
+    display: block;
+    top: 25%;
+    left: 25%;
+    position: absolute;
+    fill: #18B5DC;
+}
+.icon-list__item-link:hover,
+.icon-list__item-link:hover svg {
+    background-color:#18B5DC;
+    fill:#ffffff;
+}
